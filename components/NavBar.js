@@ -76,11 +76,20 @@ const NavBar = () => {
             </a>
           </Link>
         </div>
-        <div className='order-2 md:order-3 flex items-center'>
-          <a
-            href='#'
-            className='text-gray-800 dark:text-white hover:text-cyan-500 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none'>
-            Log in
+        <div className='order-2 md:order-3 flex items-center text-white'>
+          <a className='relative text-white hover:text-gray-200 mx-4' href='#'>
+            <svg
+              className='h-5 w-5'
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'>
+              <circle fill='none' cx='12' cy='7' r='3' />
+              <path
+                fill='currentColor'
+                stroke='none'
+                strokeWidth='1'
+                d='M12 2C9.243 2 7 4.243 7 7s2.243 5 5 5 5-2.243 5-5S14.757 2 12 2zM12 10c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3S13.654 10 12 10zM21 21v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h2v-1c0-2.757 2.243-5 5-5h4c2.757 0 5 2.243 5 5v1H21z'
+              />
+            </svg>
           </a>
 
           <a className='relative text-white hover:text-gray-200' href='#'>
@@ -92,7 +101,7 @@ const NavBar = () => {
               <path
                 d='M3 3H5L5.4 5M7 13H17L21 5H5.4M7 13L5.4 5M7 13L4.70711 15.2929C4.07714 15.9229 4.52331 17 5.41421 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM9 19C9 20.1046 8.10457 21 7 21C5.89543 21 5 20.1046 5 19C5 17.8954 5.89543 17 7 17C8.10457 17 9 17.8954 9 19Z'
                 stroke='currentColor'
-                strokeWidth='2'
+                strokeWidth='1'
                 strokeLinecap='round'
                 strokeLinejoin='round'
               />
