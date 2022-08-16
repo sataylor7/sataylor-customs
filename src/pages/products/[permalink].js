@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import { RadioGroup } from '@headlessui/react';
-import Layout from './../../src/layouts/General';
+import Layout from '@layouts/General';
 
 const product = {
   name: 'Basic Tee 6-Pack',
