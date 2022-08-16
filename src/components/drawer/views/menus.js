@@ -1,10 +1,10 @@
 import { useContext } from 'react';
 import Link from 'next/link';
 import { Scrollbar } from '@components/scrollbar';
-import ActiveLink from '@components/activeLink';
+import ActiveLink from '@components/active-link';
 import { DrawerContext } from '@contexts/drawer/drawer.provider';
 import CloseIcon from '@assets/icons/close.icon';
-import Logo from '@components/Logo';
+import Logo from '@components/logo';
 
 import { headerLinks, social } from '@configs/menus';
 

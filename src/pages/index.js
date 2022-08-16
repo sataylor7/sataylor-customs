@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Hero from '@components/Hero';
-import ProductList from '@components/ProductList';
-import Layout from '@layouts/General';
+import Hero from '@components/hero';
+import ProductList from '@components/product-list';
+import Layout from '@layouts/general';
 
 export default function Home() {
   return (
