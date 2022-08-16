@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 // import PhoneIcon from 'assets/icons/phone';
 import CartIcon from '@assets/icons/cart.icon';
-import Logo from '@components/Logo';
+import Logo from '@components/logo';
 // import Search from 'components/search-outline';
 import { DrawerContext } from '@contexts/drawer/drawer.provider';
 // import { StickyContext } from 'contexts/sticky/sticky.provider';

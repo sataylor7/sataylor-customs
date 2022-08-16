@@ -22,10 +22,10 @@ export default function DrawerMenu() {
   return (
     <>
       <div className='flex flex-col w-full h-full'>
-        <div className='w-full h-90px bg-slate-100 flex justify-start items-center relative px-30px flex-shrink-0'>
-          <Logo className='flex' onClick={hideMenu} />
+        <div className='w-full h-90px bg-slate-700 flex justify-start items-center relative px-30px flex-shrink-0'>
+          <Logo className='flex text-white' onClick={hideMenu} />
           <button
-            className='w-30px h-30px flex items-center justify-center text-gray-500 absolute right-25px focus:outline-none'
+            className='w-30px h-30px flex items-center justify-center text-white absolute right-25px focus:outline-none'
             onClick={hideMenu}
             aria-label='close'>
             <CloseIcon />
