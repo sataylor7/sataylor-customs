@@ -86,9 +86,19 @@ const Footer = () => (
           target='_blank'
           className='hover:underline'
           rel='noreferrer'>
-          SATaylor Studios LLC.
+          SATaylor Customs.
         </a>{' '}
         All Rights Reserved.
+      </span>
+      <span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
+        Build | Design &bull;&nbsp;
+        <a
+          href='#'
+          target='_blank'
+          className='hover:underline'
+          rel='noreferrer'>
+          SATaylor Studios LLC.
+        </a>
       </span>
       <div className='flex mt-4 space-x-6 sm:justify-center sm:mt-0'>
         <a

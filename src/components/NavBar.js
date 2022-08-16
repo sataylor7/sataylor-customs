@@ -43,7 +43,7 @@ const NavBar = () => {
             isOpen ? '' : 'hidden'
           } md:flex md:items-center md:w-auto w-full order-3 md:order-1`}
           id='mobile-menu-2'>
-          <ul className='flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0'>
+          <ul className='flex flex-col mt-4 font-medium md:flex-row lg:space-x-8 lg:mt-0'>
             <li>
               <a
                 href='#'
