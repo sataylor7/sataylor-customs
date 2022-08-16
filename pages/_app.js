@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import 'rc-collapse/assets/index.css';
+import 'overlayscrollbars/css/OverlayScrollbars.css';
+import '@assets/styles/globals.css';
+import { DrawerProvider } from '@contexts/drawer/drawer.provider';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function CustomApp({ Component, pageProps }) {
+  return (
+    <DrawerProvider>
+      <Component {...pageProps} />
+    </DrawerProvider>
+  );
 }
 
-export default MyApp
+export default CustomApp;

@@ -6,11 +6,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <meta
-            name='title'
-            content='Headless Commerce example with Vercel'
-            key='title'
-          />
-          <meta
             name='description'
             content='An open source headless commerce example powered by Commerce.js and Vercel. Start your headless commerce application now!'
           />

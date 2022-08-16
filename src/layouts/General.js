@@ -1,6 +1,6 @@
 import Header from './Header';
 import Footer from './Footer';
-//import { Drawer, CartDrawer } from '../drawer/drawer';
+import { Drawer, CartDrawer } from '@components/drawer';
 
 const Layout = (props) => (
   <main
@@ -10,7 +10,7 @@ const Layout = (props) => (
       WebkitOverflowScrolling: 'touch',
       ...props.style,
     }}>
-    {/* <Drawer /> */}
+    <Drawer />
     <Header />
     <div className='flex flex-col w-full h-full min-h-screen flex-grow'>
       <div className='pt-90px flex-auto'>{props.children}</div>

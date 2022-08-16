@@ -63,7 +63,6 @@ function classNames(...classes) {
 }
 
 export default function Example() {
-  console.log(RadioGroup);
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
@@ -179,7 +178,7 @@ export default function Example() {
                   <p className='sr-only'>{reviews.average} out of 5 stars</p>
                   <a
                     href={reviews.href}
-                    className='ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500'>
+                    className='ml-3 text-sm font-medium text-cyan-600 hover:text-cyan-500'>
                     {reviews.totalCount} reviews
                   </a>
                 </div>
@@ -232,7 +231,7 @@ export default function Example() {
                     <h3 className='text-sm text-gray-900 font-medium'>Size</h3>
                     <a
                       href='#'
-                      className='text-sm font-medium text-indigo-600 hover:text-indigo-500'>
+                      className='text-sm font-medium text-cyan-600 hover:text-cyan-500'>
                       Size guide
                     </a>
                   </div>
@@ -255,7 +254,7 @@ export default function Example() {
                               size.inStock
                                 ? 'bg-white shadow-sm text-gray-900 cursor-pointer'
                                 : 'bg-gray-50 text-gray-200 cursor-not-allowed',
-                              active ? 'ring-2 ring-indigo-500' : '',
+                              active ? 'ring-2 ring-cyan-500' : '',
                               'group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6'
                             )
                           }>
@@ -269,7 +268,7 @@ export default function Example() {
                                   className={classNames(
                                     active ? 'border' : 'border-2',
                                     checked
-                                      ? 'border-indigo-500'
+                                      ? 'border-cyan-500'
                                       : 'border-transparent',
                                     'absolute -inset-px rounded-md pointer-events-none'
                                   )}
@@ -304,7 +303,7 @@ export default function Example() {
 
                 <button
                   type='submit'
-                  className='mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+                  className='mt-10 w-full bg-cyan-700 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500'>
                   Add to bag
                 </button>
               </form>

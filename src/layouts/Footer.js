@@ -1,5 +1,5 @@
 import React from 'react';
-import { footerLinks, social } from '../configs/menus';
+import { footerLinks, social } from '@configs/menus';
 
 const year = new Date().getUTCFullYear();
 const Footer = () => (
@@ -13,7 +13,7 @@ const Footer = () => (
             </h3>
             <ul>
               {footerLink.children.map((child) => (
-                <li className='mb-4' key={child.id}>
+                <li className='mb-4' key={child.value}>
                   <a
                     href={child.link}
                     target='_blank'

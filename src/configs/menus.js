@@ -21,6 +21,11 @@ const footerLinks = [
       {
         id: 1,
         link: '#',
+        value: 'FAQs',
+      },
+      {
+        id: 2,
+        link: '#',
         value: 'Contact',
       },
     ],
@@ -110,7 +115,21 @@ const social = [
   },
 ];
 
+const headerLinks = [
+  {
+    id: 1,
+    pathname: '/',
+    title: 'Shop',
+  },
+  {
+    id: 2,
+    pathname: '/',
+    title: 'Custom Order',
+  },
+];
+
 export {
     footerLinks,
+    headerLinks,
     social
 }

@@ -1,32 +1,33 @@
 import { useContext, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 // import PhoneIcon from 'assets/icons/phone';
-import CartIcon from '../assets/icons/cart.icon';
-// import Logo from 'assets/icons/logo';
+import CartIcon from '@assets/icons/cart.icon';
+import Logo from '@components/Logo';
 // import Search from 'components/search-outline';
-// import { DrawerContext } from 'contexts/drawer/drawer.provider';
+import { DrawerContext } from '@contexts/drawer/drawer.provider';
 // import { StickyContext } from 'contexts/sticky/sticky.provider';
 // import { useCart } from 'contexts/cart/cart.provider';
-import { useMedia } from '../helpers/use-media';
-import { useRouter } from 'next/router';
+import { useMedia } from '@helpers/use-media';
+
 
 export default function Header() {
   const router = useRouter();
   const isLargeScreen = useMedia('(min-width: 1024px)');
-//   const { dispatch } = useContext(DrawerContext);
+  const { dispatch } = useContext(DrawerContext);
 //   const {
 //     state: { isSticky },
 //   } = useContext(StickyContext);
 //   const { itemsCount } = useCart();
 
-//   const showMenu = () => {
-//     dispatch({
-//       type: 'OPEN_MENU',
-//       payload: {
-//         menu: true,
-//       },
-//     });
-//   };
+  const showMenu = () => {
+    dispatch({
+      type: 'OPEN_MENU',
+      payload: {
+        menu: true,
+      },
+    });
+  };
 
 //   const showCart = () => {
 //     dispatch({
@@ -46,24 +47,19 @@ export default function Header() {
   const isHome = router.pathname === '/';
 
   return (
-    <header className='flex items-center text-white body-font fixed bg-slate-900 w-full h-90px z-20  px-4 lg:px-6 py-2.5'>
+    <header className='flex items-center text-white body-font fixed bg-slate-900 w-full h-90px z-20 pr-20px md:pr-30px lg:pr-40px'>
       <button
         aria-label='Menu'
         className='menuBtn flex flex-col items-center justify-center w-50px flex-shrink-0 h-full outline-none focus:outline-none lg:w-90px'
-        onClick={() => console.log('Clicked')}>
+        onClick={showMenu}>
         <span className='menuIcon'>
           <span className='bar' />
           <span className='bar' />
           <span className='bar' />
         </span>
       </button>
+      <Logo className='hidden ml-10 lg:mr-auto lg:flex' />
 
-      <Link href='/'>
-        <a className='hidden ml-10 lg:mr-auto lg:flex'>
-          <span className='sr-only'>S.A.Taylor Customs</span>
-          <span>S.A.Taylor Customs</span>
-        </a>
-      </Link>
       <a className='relative text-white hover:text-gray-200 mx-4' href='#'>
         <svg
           className='h-5 w-5'
