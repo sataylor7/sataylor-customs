@@ -76,7 +76,7 @@ export default function Header() {
       </a>
 
       <button
-        className='flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none'
+        className='flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none hover:text-gray-200'
         onClick={() => console.log('clicked')}
         aria-label='cart-button'>
         <CartIcon width='20px' height='22px' />
