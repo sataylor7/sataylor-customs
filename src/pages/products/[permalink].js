@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import { RadioGroup } from '@headlessui/react';
+import { DEFAULTS } from '@configs/site';
 import Layout from '@layouts/General';
 
 const product = {
@@ -69,7 +70,9 @@ export default function Example() {
   return (
     <Layout>
       <Head>
-        <title>{product.name} - S.A.Taylor Customs</title>
+        <title>
+          {product.name} - {DEFAULTS.defaultTitle}
+        </title>
         <meta name='description' content={product.description} />
       </Head>
       <div className='bg-white'>
