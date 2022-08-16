@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import { DrawerContext } from '../../contexts/drawer/drawer.provider';
-// import ProductDetails from './views/product-details';
+import { DrawerContext } from '@contexts/drawer/drawer.provider';
 // import Cart from './views/cart';
 // import Checkout from './views/checkout';
 import DrawerMenu from './views/menus';
@@ -16,9 +15,7 @@ import DrawerMenu from './views/menus';
 //     });
 
 //   const drawerComponent = (state) => {
-//     if (state?.showDetails === true) {
-//       return <ProductDetails />;
-//     }
+
 
 //     if (state?.showCart === true) {
 //       return <Cart />;
