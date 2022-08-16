@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: 'Basic Tee',
-    href: '#',
+    href: '/products/basic-tee',
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
     imageAlt: "Front of men's Basic Tee in black.",
@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     name: 'Basic Tee 2',
-    href: '#',
+    href: '/products/basic-tee-2',
     imageSrc:
       'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
     imageAlt: "Front of men's Basic Tee 2 in black.",

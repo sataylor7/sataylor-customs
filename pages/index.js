@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Hero from '../src/components/Hero';
-import NavBar from '../src/components/NavBar';
 import ProductList from '../src/components/ProductList';
 import Layout from '../src/layouts/General';
 
