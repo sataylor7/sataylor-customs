@@ -6,7 +6,6 @@ const INITIAL_STATE = {
   showCheckout: false,
   menu: false,
   open: false,
-  item: [],
 };
 
 function reducer(state, action) {

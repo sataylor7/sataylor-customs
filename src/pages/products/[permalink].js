@@ -1,13 +1,16 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { StarIcon } from '@heroicons/react/solid';
 import { RadioGroup } from '@headlessui/react';
 import { DEFAULTS } from '@configs/site';
-import Layout from '@layouts/General';
+import Layout from '@layouts/general';
+import { useCart } from '@contexts/cart/cart.provider';
+import { DrawerContext } from '@contexts/drawer/drawer.provider';
 
 const product = {
+  id: 7,
   name: 'Basic Tee 6-Pack',
-  price: '$192',
+  price: '192',
   href: '#',
   breadcrumbs: [
     { id: 1, name: 'Men', href: '#' },
@@ -66,6 +69,25 @@ function classNames(...classes) {
 export default function Example() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const { addItem, getItem, removeItem, clearCart } = useCart();
+  const { state, dispatch } = useContext(DrawerContext);
+
+  const addToCart = (item) => {
+    clearCart()
+    addItem(item);
+    dispatch({
+      type: 'TOGGLE_CART_VIEW',
+      payload: {
+        showCart: true,
+      },
+    });
+    dispatch({
+      type: 'SLIDE_CART',
+      payload: {
+        open: true,
+      },
+    });
+  };
 
   return (
     <Layout>
@@ -305,7 +327,8 @@ export default function Example() {
                 </div>
 
                 <button
-                  type='submit'
+                  onClick={() => addToCart(product)}
+                  type='button'
                   className='mt-10 w-full bg-cyan-700 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500'>
                   Add to bag
                 </button>

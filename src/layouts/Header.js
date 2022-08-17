@@ -29,20 +29,20 @@ export default function Header() {
     });
   };
 
-//   const showCart = () => {
-//     dispatch({
-//       type: 'SLIDE_CART',
-//       payload: {
-//         open: true,
-//       },
-//     });
-//     dispatch({
-//       type: 'TOGGLE_CART_VIEW',
-//       payload: {
-//         showCart: true,
-//       },
-//     });
-//   };
+  const showCart = () => {
+    dispatch({
+      type: 'SLIDE_CART',
+      payload: {
+        open: true,
+      },
+    });
+    dispatch({
+      type: 'TOGGLE_CART_VIEW',
+      payload: {
+        showCart: true,
+      },
+    });
+  };
 
   const isHome = router.pathname === '/';
 
@@ -77,7 +77,7 @@ export default function Header() {
 
       <button
         className='flex items-center justify-center flex-shrink-0 h-auto relative focus:outline-none hover:text-gray-200'
-        onClick={() => console.log('clicked')}
+        onClick={showCart}
         aria-label='cart-button'>
         <CartIcon width='20px' height='22px' />
         <span

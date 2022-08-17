@@ -16,7 +16,7 @@ const Layout = (props) => (
       <div className='pt-90px flex-auto'>{props.children}</div>
       <Footer />
     </div>
-    {/* <CartDrawer /> */}
+    <CartDrawer />
   </main>
 );
 export default Layout;

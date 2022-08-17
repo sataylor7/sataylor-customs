@@ -1,47 +1,47 @@
 import React, { useContext } from 'react';
 import { DrawerContext } from '@contexts/drawer/drawer.provider';
-// import Cart from './views/cart';
+import Cart from './views/cart';
 // import Checkout from './views/checkout';
 import DrawerMenu from './views/menus';
 
-// export const CartDrawer = () => {
-//   const { state, dispatch } = useContext(DrawerContext);
-//   const handleClose = () =>
-//     dispatch({
-//       type: 'SLIDE_CART',
-//       payload: {
-//         open: false,
-//       },
-//     });
+export const CartDrawer = () => {
+  const { state, dispatch } = useContext(DrawerContext);
+  const handleClose = () =>
+    dispatch({
+      type: 'SLIDE_CART',
+      payload: {
+        open: false,
+      },
+    });
 
-//   const drawerComponent = (state) => {
+  const drawerComponent = (state) => {
 
+    if (state?.showCart === true) {
+      return <Cart />;
+    }
 
-//     if (state?.showCart === true) {
-//       return <Cart />;
-//     }
+    // if (state?.showCheckout === true) {
+    //   return <Checkout />;
+    // }
 
-//     if (state?.showCheckout === true) {
-//       return <Checkout />;
-//     }
+    return <Cart />;
+  };
+  console.log('state in cart drawer', state)
 
-//     return <Cart />;
-//   };
-
-//   return (
-//     <>
-//       {state?.open === true ? (
-//         <div className='overlay' role='button' onClick={handleClose} />
-//       ) : (
-//         ''
-//       )}
-//       <div
-//         className={`drawer drawer-cart ${state?.open === true ? 'open' : ''}`}>
-//         {drawerComponent(state)}
-//       </div>
-//     </>
-//   );
-// };
+  return (
+    <>
+      {state?.open === true ? (
+        <div className='overlay' role='button' onClick={handleClose} />
+      ) : (
+        ''
+      )}
+      <div
+        className={`drawer drawer-cart ${state?.open === true ? 'open' : ''}`}>
+        {drawerComponent(state)}
+      </div>
+    </>
+  );
+};
 
 export const Drawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
