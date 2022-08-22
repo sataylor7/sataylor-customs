@@ -73,7 +73,7 @@ export default function Example() {
   const { state, dispatch } = useContext(DrawerContext);
 
   const addToCart = (item) => {
-    clearCart()
+    clearCart();
     addItem(item);
     dispatch({
       type: 'TOGGLE_CART_VIEW',

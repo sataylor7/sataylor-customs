@@ -10,7 +10,7 @@ import { formatNumber } from '@helpers/currency';
 export default function Cart() {
   const { dispatch } = useContext(DrawerContext);
 
-  const { items, calculatePrice } = useCart();
+  const { items, calculatePrice, removeItem } = useCart();
 
   const showCheckout = () => {
     dispatch({
@@ -29,6 +29,11 @@ export default function Cart() {
       },
     });
   };
+
+  const removeItemCart = (item) => {
+    console.log('remove item', item)
+    removeItem(item)
+  }
 
   console.log('items in cart', items )
 
@@ -77,6 +82,7 @@ export default function Cart() {
                       <div className='flex'>
                         <button
                           type='button'
+                          onClick={() => removeItemCart(product)}
                           className='font-medium text-cyan-600 hover:text-cyan-500'>
                           Remove
                         </button>
@@ -113,11 +119,13 @@ export default function Cart() {
           Shipping and taxes calculated at checkout.
         </p>
         <div className='mt-6'>
-          <a
-            href='#'
-            className='flex items-center justify-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700'>
+          <button
+            type='button'
+            onClick={(e) => e.preventDefault()}
+            disabled={items.length > 0 ? false : true}
+            className='w-full disabled:bg-slate-400 flex items-center justify-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700'>
             Checkout
-          </a>
+          </button>
         </div>
         <div className='mt-6 flex justify-center text-center text-sm text-gray-500'>
           <p>
@@ -125,7 +133,6 @@ export default function Cart() {
             <button
               type='button'
               className='font-medium text-cyan-600 hover:text-cyan-500'
-              disabled={items.length ? false : true}
               onClick={hideCart}>
               Continue Shopping<span aria-hidden='true'> &rarr;</span>
             </button>
