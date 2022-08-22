@@ -125,6 +125,7 @@ export default function Cart() {
             <button
               type='button'
               className='font-medium text-cyan-600 hover:text-cyan-500'
+              disabled={items.length ? false : true}
               onClick={hideCart}>
               Continue Shopping<span aria-hidden='true'> &rarr;</span>
             </button>
