@@ -144,7 +144,7 @@ export default function Checkout() {
                         </label>
                         <div>
                           <input
-                            className='w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors'
+                            className='w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors'
                             placeholder='XXXXXX'
                             type='text'
                           />
@@ -222,7 +222,7 @@ export default function Checkout() {
                           className='flex items-center cursor-pointer'>
                           <input
                             type='radio'
-                            className='form-radio h-5 w-5 text-indigo-500'
+                            className='form-radio h-5 w-5 text-cyan-500'
                             name='type'
                             id='type1'
                             checked
@@ -240,7 +240,7 @@ export default function Checkout() {
                           </label>
                           <div>
                             <input
-                              className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors'
+                              className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors'
                               placeholder='John Smith'
                               type='text'
                             />
@@ -252,7 +252,7 @@ export default function Checkout() {
                           </label>
                           <div>
                             <input
-                              className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors'
+                              className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors'
                               placeholder='0000 0000 0000 0000'
                               type='text'
                             />
@@ -264,7 +264,7 @@ export default function Checkout() {
                               Expiration date
                             </label>
                             <div>
-                              <select className='form-select w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer'>
+                              <select className='form-select w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors cursor-pointer'>
                                 <option value='01'>01 - January</option>
                                 <option value='02'>02 - February</option>
                                 <option value='03'>03 - March</option>
@@ -281,7 +281,7 @@ export default function Checkout() {
                             </div>
                           </div>
                           <div className='px-2 w-1/4'>
-                            <select className='form-select w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors cursor-pointer'>
+                            <select className='form-select w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors cursor-pointer'>
                               <option value='2020'>2020</option>
                               <option value='2021'>2021</option>
                               <option value='2022'>2022</option>
@@ -300,7 +300,7 @@ export default function Checkout() {
                             </label>
                             <div>
                               <input
-                                className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-indigo-500 transition-colors'
+                                className='w-full px-3 py-2 mb-1 border border-gray-200 rounded-md focus:outline-none focus:border-cyan-600 transition-colors'
                                 placeholder='000'
                                 type='text'
                               />
@@ -315,7 +315,7 @@ export default function Checkout() {
                         className='flex items-center cursor-pointer'>
                         <input
                           type='radio'
-                          className='form-radio h-5 w-5 text-indigo-500'
+                          className='form-radio h-5 w-5 text-cyan-500'
                           name='type'
                           id='type2'
                         />
@@ -328,7 +328,7 @@ export default function Checkout() {
                     </div>
                   </div>
                   <div>
-                    <button className='block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold'>
+                    <button className='block w-full max-w-xs mx-auto bg-cyan-600 hover:bg-cyan-700 focus:bg-cyan-700 text-white rounded-lg px-3 py-2 font-semibold'>
                       <i className='mdi mdi-lock-outline mr-1'></i> PAY NOW
                     </button>
                   </div>
