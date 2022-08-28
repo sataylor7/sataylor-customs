@@ -1,9 +1,11 @@
 import { useContext } from 'react';
+import Router from 'next/router';
 import ArrowLeft from '@assets/icons/arrow-left.icon';
 import { Scrollbar } from '@components/scrollbar';
 import { useCart } from '@contexts/cart/cart.provider';
 import { DrawerContext } from '@contexts/drawer/drawer.provider';
 import { formatNumber } from '@helpers/currency';
+import NoItem from './no-item';
 // import { CURRENCY } from 'helpers/constants';
 // import CurrencyFormat from 'react-currency-format';
 
@@ -33,6 +35,11 @@ export default function Cart() {
   const removeItemCart = (item) => {
     console.log('remove item', item)
     removeItem(item)
+  }
+
+  const goToCheckout = (e) => {
+    e.preventDefault();
+    Router.push('/checkout')
   }
 
   console.log('items in cart', items )
@@ -95,7 +102,7 @@ export default function Cart() {
           </Scrollbar>
         </>
       ) : (
-        <div> you have no items in your basket </div>
+        <NoItem />
       )}
 
       <div className='flex flex-col flex-shrink-0 p-30px'>
@@ -121,7 +128,7 @@ export default function Cart() {
         <div className='mt-6'>
           <button
             type='button'
-            onClick={(e) => e.preventDefault()}
+            onClick={goToCheckout}
             disabled={items.length > 0 ? false : true}
             className='w-full disabled:bg-slate-400 flex items-center justify-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700'>
             Checkout

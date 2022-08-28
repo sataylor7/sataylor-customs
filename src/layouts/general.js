@@ -2,18 +2,18 @@ import Header from './header';
 import Footer from './footer';
 import { Drawer, CartDrawer } from '@components/drawer';
 
-const Layout = (props) => (
+const Layout = ({style, children, header = true}) => (
   <main
     className='layout relative min-h-screen flex-grow'
     style={{
       minHeight: '-webkit-fill-available',
       WebkitOverflowScrolling: 'touch',
-      ...props.style,
+      ...style,
     }}>
     <Drawer />
-    <Header />
+    {header && <Header />}
     <div className='flex flex-col w-full h-full min-h-screen flex-grow'>
-      <div className='pt-90px flex-auto'>{props.children}</div>
+      <div className='pt-90px flex-auto'>{children}</div>
       <Footer />
     </div>
     <CartDrawer />
