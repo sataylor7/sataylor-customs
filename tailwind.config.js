@@ -14,6 +14,7 @@ module.exports = {
         half: '50%',
         '720px': '720px',
         '820px': '820px',
+        '5xl': '1024px',
       },
       maxHeight: {
         '650px': '650px',
