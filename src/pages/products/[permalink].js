@@ -88,13 +88,11 @@ export default function Example() {
       },
     });
   };
-
+  const title = `${product.name} - ${DEFAULTS.defaultTitle}`;
   return (
     <Layout>
       <Head>
-        <title>
-          {product.name} - {DEFAULTS.defaultTitle}
-        </title>
+        <title>{title}</title>
         <meta name='description' content={product.description} />
       </Head>
       <div className='bg-white'>
